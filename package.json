@@ -1,5 +1,5 @@
 {
-  "name": "employee-management-system",
+  "name": "Updated employee-management-system",
   "version": "1.0.0",
   "description": "Employee Management System",
   "main": "app.js",
@@ -25,5 +25,5 @@
   "bugs": {
     "url": "https://github.com/stephanyalcaide"
   },
-  "homepage": "https://github.com/stephanyalcaide"
+  "homepage": "https://github.com/stephanyalcaide/readme"
 }
