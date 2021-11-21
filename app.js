@@ -1,17 +1,9 @@
 var mysql = require("mysql");
-var inq = require("inquirer");
+var inq = require("./node_modeules/inquirer");
 var table = require("console.table");
 var add = require("./lib/add");
-var update = require("./lib/update");
 var view = require("./lib/view");
 
-var connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "eumamgreshit5",
-  database: "company_db"
-});
 
 connection.connect(function(err) {
   if (err) throw err;
@@ -23,13 +15,13 @@ exports.start = () => {
     inq.prompt([
         {
             type: "list",
-            message: "What would you like to do?",
+            message: "what is that you would like do today please select one down below?",
             name: "choice",
             choices: [
-                "View All Employees",
-                "Add Employee",
-                "Update Employee Role",
-                "EXIT"                
+                "View all of Employees",
+                "Add an Employee",
+                "get updates on employees",
+                "done"                
             ]
         }
     ])
@@ -40,7 +32,7 @@ exports.start = () => {
       else if(answer.choice === "Add Employee") {
         add.addEmployee();
       }      
-      else if(answer.choice === "Update Employee Role") {
+      else if(answer..choice === "Update Employee Role") {
         update.updateRole();
       }
       else if(answer.choice === "EXIT") {
@@ -48,5 +40,13 @@ exports.start = () => {
         return
       }
     });
+  
+  var connection = mysql.createConnection({
+  host: "localhost",
+  port: 3000,
+  user: "root",
+  password: "Brunomars45",
+  database: "company_db"
+});
     
 };
